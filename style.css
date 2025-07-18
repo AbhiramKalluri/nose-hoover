@@ -1,0 +1,92 @@
+/* Basic Reset & Font Import */
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace; /* A good monospace font for a techy, minimalist look */
+    line-height: 1.6;
+    color: #e0e0e0; /* Light grey text */
+    background-color: #1a1a1a; /* Very dark background */
+}
+
+/* Global Styles */
+a {
+    color: #00bcd4; /* A teal/cyan for links, stands out well on dark */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4dd0e1;
+}
+
+h1, h2, h3 {
+    color: #ffffff; /* White headings */
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #00bcd4; /* Make bold text stand out slightly */
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #2a2a2a; /* Slightly lighter dark for content blocks */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Header & Navigation */
+header {
+    background-color: #222222;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #333333;
+}
+
+nav a {
+    color: #e0e0e0;
+    margin: 0 15px;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* About Me Section */
+.profile-pic {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    border: 3px solid #00bcd4;
+}
+
+/* Project Items */
+.project-item {
+    background-color: #333333;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 5px solid #00bcd4; /* A little accent */
+}
+
+.project-item h3 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #222222;
+    color: #888888;
+    font-size: 0.9em;
+    border-top: 1px solid #333333;
+}
