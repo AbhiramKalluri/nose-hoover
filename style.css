@@ -10,7 +10,7 @@ body {
     background-color: #1a1a1a; /* Very dark background for main content */
 
     /* Background Image */
-    background-image: url('background.jpg'); /* Your image file */
+    background-image: url('background.png'); /* Your image file */
     background-size: cover; /* Cover the entire viewport */
     background-attachment: fixed; /* Fix the background so it doesn't scroll with content */
     background-position: center center; /* Center the background image */
