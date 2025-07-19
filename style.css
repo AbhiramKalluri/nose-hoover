@@ -89,7 +89,7 @@ nav {
 }
 
 nav a {
-    color: #88ee88;
+    color: #395fbf;
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
@@ -120,7 +120,7 @@ section h1 {
 }
 
 .project-item h3 {
-    color: #66cc66;
+    color: #4c6baf;
     margin-top: 0;
 }
 
@@ -141,7 +141,7 @@ section h1 {
 }
 
 .project-links .button:hover {
-    background-color: #66bb6a;
+    background-color: #4c6baf;
     color: #000;
 }
 
