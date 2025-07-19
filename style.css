@@ -1,117 +1,152 @@
-/* General Body and Container Styles (assuming these are already present or you'll add them) */
+/* General Body and Container Styles */
 body {
     font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+
+    /* Dark theme colors */
+    color: #e0e0e0; /* Light grey text */
+    background-color: #1a1a1a; /* Very dark background for main content */
+
+    /* Background Image */
+    background-image: url('background.jpg'); /* Your image file */
+    background-size: cover; /* Cover the entire viewport */
+    background-attachment: fixed; /* Fix the background so it doesn't scroll with content */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    
+    /* Overlay for readability on background image */
+    position: relative; /* Needed for the ::before pseudo-element */
+    z-index: 1; /* Ensure content is above the overlay */
+}
+
+/* Add an overlay to make the text more readable over the background image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+    z-index: -1; /* Place it behind the content */
 }
 
 .container {
     max-width: 960px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
+    background: rgba(40, 40, 40, 0.9); /* Slightly transparent dark background for content blocks */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Stronger shadow for dark theme */
 }
 
 /* Header Styles */
 header {
-    background-color: #333;
+    background-color: #0d0d0d; /* Even darker background for header */
     color: #fff;
-    padding: 0; /* Remove padding from header as hero-section will handle it */
+    padding: 0;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 /* Hero Section (for name and picture) */
 .hero-section {
-    padding: 40px 20px; /* Adjust padding as needed for vertical spacing */
-    background-color: #444; /* Slightly different background for the hero section */
+    padding: 40px 20px;
+    background-color: #1a1a1a; /* Dark background for the hero section */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px; /* Space between elements */
+    gap: 15px;
 }
 
 .profile-picture {
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Ensure it's a circle */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border: 4px solid #fff; /* White border around the picture */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4CAF50; /* A subtle accent color for the border */
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.6); /* Glowing effect */
 }
 
 .hero-section h1 {
     margin: 0;
-    font-size: 3em; /* Big title for your name */
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 3em;
+    color: #4CAF50; /* Accent color for your name */
+    text-shadow: 2px 2px 8px rgba(0,255,0,0.3); /* Greenish shadow */
 }
 
 .hero-section .tagline {
     font-size: 1.2em;
-    color: #eee;
+    color: #b0b0b0; /* Lighter grey for tagline */
     margin: 0;
 }
 
 /* Navigation Styles */
 nav {
-    background-color: #555;
+    background-color: #2a2a2a; /* Darker grey for nav */
     padding: 10px 0;
     text-align: center;
+    border-top: 1px solid #444;
 }
 
 nav a {
-    color: #fff;
+    color: #88ee88; /* Lighter green for nav links */
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #777;
+    background-color: #4CAF50; /* Green on hover */
+    color: #000; /* Dark text on green hover */
 }
 
-/* Existing styles for sections, projects, etc., should be kept or added below */
+/* Section Headings */
 section h1 {
-    color: #333;
-    border-bottom: 2px solid #555;
+    color: #4CAF50; /* Accent color for section titles */
+    border-bottom: 2px solid #4CAF50; /* Accent color for border */
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
+/* Project Item Styles */
 .project-item {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    background: rgba(50, 50, 50, 0.9); /* Slightly lighter dark background for project items */
+    border: 1px solid #444;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .project-item h3 {
-    color: #0056b3;
+    color: #66cc66; /* Lighter green for project titles */
     margin-top: 0;
+}
+
+.project-item p {
+    color: #c0c0c0; /* Slightly lighter text within project items */
 }
 
 .project-links .button {
     display: inline-block;
-    background-color: #007bff;
-    color: white;
+    background-color: #4CAF50; /* Green button */
+    color: #1a1a1a; /* Dark text on green button */
     padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
     margin-right: 10px;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-links .button:hover {
-    background-color: #0056b3;
+    background-color: #66bb6a; /* Lighter green on hover */
+    color: #000;
 }
 
 .project-media {
@@ -123,21 +158,36 @@ section h1 {
     height: auto;
     display: block;
     margin-top: 10px;
-    border: 1px solid #eee;
+    border: 1px solid #666; /* Darker border for images */
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .media-caption {
     font-style: italic;
-    color: #666;
+    color: #909090; /* Lighter grey for captions */
     margin-top: 5px;
     font-size: 0.9em;
 }
 
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #0d0d0d; /* Very dark background for footer */
+    color: #888; /* Dimmer text for copyright */
     margin-top: 20px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
+}
+
+/* Link colors for general text */
+a {
+    color: #4CAF50; /* Accent color for general links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #66bb6a; /* Lighter accent on hover */
+    text-decoration: underline;
 }
