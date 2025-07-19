@@ -10,7 +10,7 @@ body {
     background-color: #1a1a1a;
 
     /* Background Image */
-    background-image: url('background.jpg'); /* Updated to your JPG file */
+    background-image: url('background.png'); /* Updated to your JPG file */
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
