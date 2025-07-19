@@ -65,15 +65,13 @@ header {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #4CAF50;
-    box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+    border: 4px solid #4c6baf;
 }
 
 .hero-section h1 {
     margin: 0;
     font-size: 3em;
-    color: #4CAF50;
-    text-shadow: 2px 2px 8px rgba(0,255,0,0.3);
+    color: #4c6baf;
 }
 
 .hero-section .tagline {
